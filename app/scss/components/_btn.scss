@@ -1,0 +1,16 @@
+.btn {
+  @include h6;
+  color: $white;
+  border: none;
+  outline: none;
+  padding: 16px 32px;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+  &:hover {
+    outline: none;
+  }
+}

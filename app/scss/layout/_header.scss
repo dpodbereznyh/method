@@ -1,0 +1,95 @@
+.main__screen_wrap{
+    position: relative;
+  height: 1080px;
+}
+.header {
+  max-width: 1284px;
+  width: 100%;
+  padding-bottom: 134px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  z-index: 2;
+  &__logo {
+    margin-right: 40px;
+  }
+  &__nav {
+    padding-top: 53px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto 245px;
+
+    &_list {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    &_link {
+      @include body2;
+      color: $blackMain;
+    }
+  }
+}
+.offer__wrap {
+  display: flex;
+  margin-bottom: 90px;
+}
+.offer__text {
+  width: 46%;
+  margin-right: 238px;
+  &_list {
+    position: relative;
+    width: 100%;
+    margin: 66px 0;
+    padding: 25px 0 1px 25px;
+  }
+  &_item {
+    margin-bottom: 16px;
+    p {
+      @include h3;
+    }
+  }
+}
+.offer__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-family: Geometria;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 126px;
+  }
+}
+.corner {
+  position: absolute;
+  width: 95px;
+  height: 47px;
+  &__up {
+    left: 0;
+    top: 0;
+    background: url("../img/header/corner-up.svg") no-repeat center center/cover;
+  }
+  &__bottom {
+    right: 0;
+    bottom: 0;
+    background: url("../img/header/corner-bottom.svg") no-repeat center center/cover;
+  }
+}
+.rectangle {
+  width: 236px;
+  height: 61px;
+  background: url("../img/header/rectangle.svg")no-repeat center center/ cover;
+  &__bottom {
+    margin-left: auto;
+  }
+}
+.btn__offer {
+  background: $pinkMain;
+  display: inline-block;
+  margin-left: 128px;
+}

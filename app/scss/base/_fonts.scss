@@ -1,0 +1,10 @@
+@import "../abstracts/mixins";
+
+@include font-face("OpenSans", "../fonts/Open Sans/OpenSans-Light", 300);
+@include font-face("OpenSans", "../fonts/Open Sans/OpenSans-Regular", 400);
+@include font-face("OpenSans", "../fonts/Open Sans/OpenSans-SemiBold", 600);
+@include font-face("OpenSans", "../fonts/Open Sans/OpenSans-Bold", 700);
+@include font-face("OpenSans", "../fonts/Open Sans/OpenSans-ExtraBold", 800);
+
+
+@include font-face("icomoon", "../fonts/icomoon/icomoon");
