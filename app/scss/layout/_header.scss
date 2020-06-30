@@ -1,27 +1,64 @@
 .main__screen_wrap{
     position: relative;
-  height: 1080px;
+  height: 100vh;
+  //background: #8ACCE2;
+}
+.animate__container {
+  position: relative;
+  background: red;
+  height: 100vh;
+}
+.HYPE_element_container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.HYPE_element {
+  pointer-events: auto;
+  position: absolute;
+  background-image: url(../img/header/50ea6f333adf5baf1b1984d3d90420a5-1.gif);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: 100% 100%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 .header {
   max-width: 1284px;
   width: 100%;
-  padding-bottom: 134px;
+  height: 100vh;
+  padding-bottom: 45px;
   position: absolute;
   left: 50%;
   top: 0;
   transform: translate(-50%);
   z-index: 2;
+  >.container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
   &__logo {
-    margin-right: 40px;
+    margin-right: 100px;
+    width: 200px;
+    img {
+      display: inline-block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
   }
   &__nav {
     padding-top: 53px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto 245px;
-
     &_list {
       display: flex;
       justify-content: space-between;
@@ -30,12 +67,14 @@
     &_link {
       @include body2;
       color: $blackMain;
+      text-transform: uppercase;
+      font-weight: 500;
     }
   }
 }
 .offer__wrap {
   display: flex;
-  margin-bottom: 90px;
+  margin-bottom: 45px;
 }
 .offer__text {
   width: 46%;
@@ -43,7 +82,7 @@
   &_list {
     position: relative;
     width: 100%;
-    margin: 66px 0;
+    margin: 33px 0;
     padding: 25px 0 1px 25px;
   }
   &_item {
@@ -57,6 +96,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 37%;
   p {
     font-family: Geometria;
     font-style: normal;
@@ -92,4 +132,28 @@
   background: $pinkMain;
   display: inline-block;
   margin-left: 128px;
+  text-transform: uppercase;
+  max-width: 404px;
+}
+.arrow__down {
+  display: block;
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  position: relative;
+  margin-left: auto;
+  &:after {
+    content: "";
+    display: block;
+    background: url("../img/header/arrow-down.svg");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 555;
+    width: 12px;
+    height: 28px;
+  }
 }

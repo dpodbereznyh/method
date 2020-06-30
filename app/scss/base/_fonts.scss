@@ -5,6 +5,9 @@
 @include font-face("OpenSans", "../fonts/Open Sans/OpenSans-SemiBold", 600);
 @include font-face("OpenSans", "../fonts/Open Sans/OpenSans-Bold", 700);
 @include font-face("OpenSans", "../fonts/Open Sans/OpenSans-ExtraBold", 800);
+@include font-face("Geometria", "../fonts/Geometria/Geometria", normal);
+@include font-face("Geometria", "../fonts/Geometria/Geometria-Medium", medium);
+@include font-face("Geometria", "../fonts/Geometria/Geometria-Bold", bold);
 
 
 @include font-face("icomoon", "../fonts/icomoon/icomoon");
