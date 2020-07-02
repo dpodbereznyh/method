@@ -56,8 +56,8 @@
   }
 }
 .about {
-  padding: 60px 0 63px;
-  background: $green10;
+  //padding: 60px 0 63px;
+  min-height: 100vh;
   position: relative;
   >.container-fluid {
     position: relative;
