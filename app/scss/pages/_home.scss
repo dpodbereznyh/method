@@ -26,6 +26,14 @@
   &__title {
     @include h1;
   }
+  &__desc {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 32px;
+  }
 }
 .navbar {
   width: 30px;
@@ -46,7 +54,7 @@
     height: 230px;
     top: 50%;
     left: 0;
-    transform: translate(-600%, -50%);
+    transform: translate(-500%, -50%);
   }
   &__dotts_item {
     width: 11px;
@@ -77,10 +85,6 @@
       width: 642px;
       display: flex;
       justify-content: space-between;
-    }
-    &_info_desc {
-      @include body1;
-      margin-bottom: 32px;
     }
     &_info_video_wrap {
       display: flex;
@@ -170,6 +174,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-right: 38px;
   }
   &__item {
     width: 251px;
@@ -226,6 +231,36 @@
 .blur-cobalt {
   border: 66px solid $cobalt10;
 }
+@include desktop {
+  .about__desc_gallery {
+    width: 46%;
+  }
+  .about__desc_info {
+    width: 48%;
+  }
+  .vertical__dots_list {
+    transform: translate(-400%,-50%);
+  }
+  .work-vector__item, .work-vector__item_blur, .work-vector__item_cont {
+    width: 199px;
+    height: 199px;
+  }
+  .work-vector__item_cont {
+    left: 19px;
+  }
+  .work-vector__list {
+    padding-right: 19px;
+  }
+  .work-vector__item_title {
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 11px;
+  }
+
+  }
+
+//Team
+
 .team {
   &__vertical__dots_list {
     height: 230px;
@@ -257,6 +292,10 @@
       height: auto;
     }
   }
+  &__swiper-slide-video {
+    width: 100%;
+    height: 100%;
+  }
   &__swiper_bullet {
     width: 8px;
     height: 8px;
@@ -271,6 +310,21 @@
     border-radius: 8px;
   }
 }
+.container-fluid-navbar {
+  position: absolute;
+  padding-top: 64px;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.container-fluid-arrow {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 64px;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 .swiper-pagination {
   position: absolute;
   display: flex;
@@ -279,4 +333,141 @@
   left: 50%;
   transform: translate(-50%, -64px);
   z-index: 3;
+}
+@include desktop {
+  .team__vertical__dots_list {
+    transform: translate(400%, -50%);
+  }
+  .container-fluid-navbar {
+    padding-top: 32px;
+  }
+  .container-fluid-arrow {
+    padding-bottom: 32px;
+  }
+  .swiper-pagination {
+    transform: translate(-50%,-40px);
+  }
+}
+@include laptop {
+  .team__title {
+    width: 607px;
+    font-size: 35px;
+    line-height: 50px;
+  }
+}
+@include tablet {
+  .team__title {
+    width: 80%;
+    font-size: 28px;
+    line-height: 43px;
+  }
+  .team__vertical__dots_list {
+    height: 170px;
+    transform: translate(200%,-50%);
+  }
+  .vertical__dotts_item {
+    width: 6px;
+    height: 6px;
+  }
+  .team__swiper_bullet {
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+  }
+  .team__swiper_bullet-active {
+    width: 50px;
+  }
+}
+@include phones {
+  .team__title {
+    width: 80%;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .vertical__dotts_item {
+    width: 4px;
+    height: 4px;
+  }
+  .team__vertical__dots_list {
+    height: 90px;
+  }
+  .container-fluid-navbar {
+    padding-top: 16px;
+  }
+  .container-fluid-arrow {
+    padding-bottom: 16px;
+  }
+  .swiper-pagination {
+    transform: translate(-50%,-22px);
+  }
+}
+
+//Cases
+
+.cases {
+  padding: 64px 0 190px;
+  background: $green10;
+  position: relative;
+  >.container-fluid {
+    position: relative;
+  }
+  &__desc {
+    max-width: 642px;
+    margin-bottom: 64px;
+  }
+  &__list {
+    display: flex;
+    width: 931px;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto 32px;
+  }
+  &__item {
+    width: 290px;
+    height: 190px;
+    position: relative;
+    margin-bottom: 32px;
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+    &_btn {
+      display: inline-block;
+      text-transform: uppercase;
+      background: $main5;
+      transition: all 0.3s ease;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &:hover {
+        background: darken($main5, 10);
+        transition: all 0.3s ease;
+        color: $white;
+      }
+    }
+  }
+  &__btn {
+    background: #292929;
+    color: $white;
+    text-transform: uppercase;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    &:hover {
+      transition: all 0.3s ease;
+      background: darken(#292929, 10);
+      color: $white;
+    }
+  }
+  &__gradient {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, #8CD9B3 0%, #9937B7 100%);
+  }
 }

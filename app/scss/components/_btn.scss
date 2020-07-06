@@ -4,6 +4,9 @@
   border: none;
   outline: none;
   padding: 16px 32px;
+  display: block;
+  height: fit-content;
+  width: fit-content;
   &:focus {
     outline: none;
   }

@@ -233,8 +233,29 @@
   background: transparent;
   padding-top: 53px;
 }
+.sm-simple>li>a {
+  padding: 18px 0;
+  margin: 0 7px;
+  position: relative;
+  transition: all 0.3s ease;
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background: $main5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
+  &:hover:after {
+    opacity: 1;
+    transition: all 0.3s ease;
+
+  }
+}
 .sm-simple>li>a:last-child {
-  padding: 18px 0 18px 14px;
 }
 .sm-simple a {
   @include body2;

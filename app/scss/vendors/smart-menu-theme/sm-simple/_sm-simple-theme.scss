@@ -129,14 +129,14 @@ $sm-simple__toggle-spacing: floor($sm-simple__item-height * 0.1);
 		&:hover,
 		&:focus,
 		&:active {
-			padding: $sm-simple__collapsible-item-padding-vertical $sm-simple__collapsible-item-padding-horizontal;
+			//padding: $sm-simple__collapsible-item-padding-vertical $sm-simple__collapsible-item-padding-horizontal;
 			/* make room for the toggle button (sub indicator) */
-			padding-right: $sm-simple__collapsible-item-padding-horizontal + $sm-simple__toggle-size + $sm-simple__toggle-spacing;
-			color: $sm-simple__collapsible-item-color;
+			//padding-right: $sm-simple__collapsible-item-padding-horizontal + $sm-simple__toggle-size + $sm-simple__toggle-spacing;
+			//color: $sm-simple__collapsible-item-color;
 			font-family: $sm-simple__font-family;
 			font-size: $sm-simple__font-size-base;
 			font-weight: normal;
-			line-height: $sm-simple__line-height;
+			//line-height: $sm-simple__line-height;
 			text-decoration: none;
 		}
 
@@ -234,15 +234,15 @@ $sm-simple__toggle-spacing: floor($sm-simple__item-height * 0.1);
 			&:focus,
 			&:active,
 			&.highlighted {
-				padding: $sm-simple__desktop-item-padding-vertical $sm-simple__desktop-item-padding-horizontal;
-				color: $sm-simple__desktop-item-color;
+				//padding: $sm-simple__desktop-item-padding-vertical $sm-simple__desktop-item-padding-horizontal;
+				color: #000000;
 			}
 
 			&:hover,
 			&:focus,
 			&:active,
 			&.highlighted {
-				background: $sm-simple__desktop-item-hover-bg;
+				background: transparent;
 			}
 
 			&.current {
