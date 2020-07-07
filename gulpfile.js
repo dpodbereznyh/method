@@ -10,7 +10,10 @@ var gulp          = require('gulp'),
     rename        = require('gulp-rename'),
     autoprefixer  = require('gulp-autoprefixer'),
     notify        = require('gulp-notify'),
-    rsync         = require('gulp-rsync');
+    rsync         = require('gulp-rsync'),
+    postcss       = require('gulp-postcss'),
+    pxtoviewport	= require('@apimediaru/postcss-px-to-viewport');
+
 
 gulp.task('browser-sync', function() {
     browserSync({
@@ -26,11 +29,35 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('styles', function() {
+    var processors = [
+        pxtoviewport({
+            viewportWidth: 1500,
+            viewportUnit: 'vw',
+            fontViewportUnit: 'vw',
+            unitToConvert: 'px',
+            replace: false,
+            mediaQuery: true,
+        })
+    ];
+    var processors2 = [
+        pxtoviewport({
+            viewportWidth: 1500,
+            viewportUnit: 'vw',
+            fontViewportUnit: 'vw',
+            unitToConvert: 'rem',
+            replace: false,
+            mediaQuery: true,
+            minPixelValue: 0.1,
+            api_multiplier: 16,
+        })
+    ];
     return gulp.src('app/'+syntax+'/**/*.'+syntax+'')
         .pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
         .pipe(rename({ suffix: '.min', prefix : '' }))
         .pipe(autoprefixer(['last 15 versions']))
         .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
+        .pipe(postcss(processors))
+        .pipe(postcss(processors2))
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.stream())
 });

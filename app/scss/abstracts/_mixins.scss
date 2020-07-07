@@ -48,6 +48,13 @@
   font-size: 41px;
   line-height: 56px;
 }
+@mixin h2 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+}
 @mixin h3 {
   font-family: $font-family;
   font-style: normal;
@@ -55,12 +62,19 @@
   font-size: 32px;
   line-height: 44px;
 }
+@mixin h4 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+}
 @mixin h6 {
   font-family: $font-family;
   font-style: normal;
-  font-weight: normal;
-  font-size: 23px;
-  line-height: 31px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
 }
 @mixin desktop {
   @media screen and (max-width: 1200px ) {

@@ -9,6 +9,7 @@
   "author": "api-media",
   "license": "ISC",
   "devDependencies": {
+    "@apimediaru/postcss-px-to-viewport": "^1.2.4",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -23,7 +24,6 @@
   },
   "dependencies": {
     "gulp-postcss": "^8.0.0",
-    "lodash.iteratee": "^4.7.0",
-    "postcss-px-to-viewport": "^1.1.1"
+    "lodash.iteratee": "^4.7.0"
   }
 }
