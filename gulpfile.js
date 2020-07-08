@@ -31,7 +31,7 @@ gulp.task('browser-sync', function() {
 gulp.task('styles', function() {
     var processors = [
         pxtoviewport({
-            viewportWidth: 1500,
+            viewportWidth: 1920,
             viewportUnit: 'vw',
             fontViewportUnit: 'vw',
             unitToConvert: 'px',
@@ -41,7 +41,7 @@ gulp.task('styles', function() {
     ];
     var processors2 = [
         pxtoviewport({
-            viewportWidth: 1500,
+            viewportWidth: 1920,
             viewportUnit: 'vw',
             fontViewportUnit: 'vw',
             unitToConvert: 'rem',
