@@ -560,6 +560,16 @@
 //Development
 
 .development {
+  position: relative;
+  &__bg-gradient {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(180deg, #8CD9B3 0%, #9937B7 100%);
+  }
   &__title {
     color: $white;
   }
@@ -617,6 +627,12 @@
    @include h6;
     background: $main5;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      background: darken($main5, 10);
+      transition: all 0.3s ease;
+    }
   }
 }
 .development__stage {
@@ -706,6 +722,7 @@
       height: 48px;
       border-radius: 50%;
       background: #ffffff59;
+      backdrop-filter: blur(15px);
       border: 1px solid $white;
       margin-right: 32px;
       display: flex;
@@ -752,8 +769,18 @@
 
 .promotion {
   padding: 64px 0;
-  background: $green10;
+  background: #3A3EB9;
   position: relative;
+  &__bg-gradient {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(180deg, #3A3EB9 0%, #9937B7 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
   >.container-fluid {
     position: relative;
     z-index: 5;
@@ -823,12 +850,15 @@
   &_item {
     display: flex;
     align-items: center;
+    position: relative;
+    margin-bottom: 75px;
   }
   &_title {
     @include subtitle1;
     color: $white;
     max-width: 132px;
     text-align: right;
+    text-transform: uppercase;
   }
   &_num_wrap {
     width: 100px;
@@ -861,5 +891,232 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 20px;
+      position: absolute;
+      top: 100px;
+      left: 20px;
+      background: url('../img/promotion/stage-arrow.svg') no-repeat center center/cover;
+    }
+  }
+  &_finish {
+    width: 55px;
+    height: 55px;
+    margin-left: 160px;
+    margin-top: 10px;
+    img {
+      display: inline-block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+//Audit
+
+.audit {
+  padding: 64px 0;
+  position: relative;
+  &__bg-gradient {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 2;
+    background: rgba(58,62,185,1);
+    background: -moz-linear-gradient(top, rgba(58,62,185,1) 0%, rgba(242,80,117,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(58,62,185,1)), color-stop(100%, rgba(242,80,117,1)));
+    background: -webkit-linear-gradient(top, rgba(58,62,185,1) 0%, rgba(242,80,117,1) 100%);
+    background: -o-linear-gradient(top, rgba(58,62,185,1) 0%, rgba(242,80,117,1) 100%);
+    background: -ms-linear-gradient(top, rgba(58,62,185,1) 0%, rgba(242,80,117,1) 100%);
+    background: linear-gradient(to bottom, rgba(58,62,185,1) 0%, rgba(242,80,117,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a3eb9', endColorstr='#f25075', GradientType=0 );
+  }
+  >.container-fluid {
+    position: relative;
+    z-index: 5;
+    height: 100%;
+  }
+  &__title {
+    color: $white;
+  }
+  &__desc {
+    @include subtitle2;
+    color: $white;
+    max-width: 667px;
+    margin-bottom: 32px;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list {
+    max-width: 667px;
+  }
+  &__item {
+    width: 100%;
+    border: 1.5px solid #FFFFFF;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.35);
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__item_title {
+    @include subtitle1;
+    text-align: left;
+    margin-bottom: 16px;
+    color: $white;
+    text-transform: uppercase;
+  }
+  &__item_title-center {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  &__item_list_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    span {
+      min-width: 15px;
+      height: 15px;
+      border: 1px solid $white;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+    p {
+      @include subtitle2;
+      color: $white;
+    }
+  }
+  &__item_btn {
+    background: #292929;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    &:hover {
+      background: lighten(#292929, 10);
+      transition: all 0.3s ease;
+    }
+  }
+  &__stage_list {
+    margin-bottom: 11px;
+  }
+  &__stage_title {
+    text-align: right;
+    max-width: 276px;
+    @include subtitle1;
+    color: $white;
+  }
+  &__stage_title-odd {
+    margin-right: 115px;
+  }
+  &__stage_item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 80px;
+    &:last-child {
+      margin-bottom: 11px;
+    }
+  }
+  &__stage_item-odd {
+    justify-content: flex-start;
+  }
+  &__stage_icon {
+    width: 127px;
+    height: 127px;
+    position: relative;
+    margin-right: 75px;
+  }
+  &__stage_icon-odd {
+    margin-right: 0;
+  }
+  &__stage_image {
+    width: 42px;
+    height: 55px;
+    margin-right: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    img {
+      display: inline-block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__stage_image {
+    margin-right: 0;
+  }
+  &__stage_icon-blur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 127px;
+    height: 127px;
+    background: #FBC7D2;
+    opacity: 0.35;
+    filter: blur(55px);
+    z-index: 1;
+  }
+  &__stage_item-blur {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(229.12deg, #76C79C 27.15%, rgba(158, 213, 231, 0) 98.29%);
+    filter: blur(55px);
+    transform: translate(25%, 0);
+  }
+  &__stage_item-blur-odd {
+    transform: translate(-25%, 0);
+  }
+  &__stage_item-arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 55px);
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #F9AFC0;
+    border: 1px solid $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 7px;
+      height: 15px;
+      display: inline-block;
+    }
+  }
+  &__stage_item-finish {
+
+  }
+  &__stage_finish {
+    width: 45px;
+    height: 45px;
+    margin-left: auto;
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+    }
   }
 }
