@@ -31,10 +31,15 @@ gulp.task('browser-sync', function() {
 gulp.task('styles', function() {
     var processors = [
         pxtoviewport({
+            selectorBlackList: ['container-fluid'],
             viewportWidth: 1920,
             viewportUnit: 'vw',
             fontViewportUnit: 'vw',
             unitToConvert: 'px',
+            unitPrecision: 5,
+            landscape: false,
+            landscapeUnit: 'vw',
+            // landscapeWidth: 568,
             replace: false,
             mediaQuery: true,
         })
