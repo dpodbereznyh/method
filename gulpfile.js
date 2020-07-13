@@ -29,40 +29,11 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('styles', function() {
-    var processors = [
-        pxtoviewport({
-            selectorBlackList: ['container-fluid'],
-            viewportWidth: 1920,
-            viewportUnit: 'vw',
-            fontViewportUnit: 'vw',
-            unitToConvert: 'px',
-            unitPrecision: 5,
-            landscape: false,
-            landscapeUnit: 'vw',
-            // landscapeWidth: 568,
-            replace: false,
-            mediaQuery: true,
-        })
-    ];
-    var processors2 = [
-        pxtoviewport({
-            viewportWidth: 1920,
-            viewportUnit: 'vw',
-            fontViewportUnit: 'vw',
-            unitToConvert: 'rem',
-            replace: false,
-            mediaQuery: true,
-            minPixelValue: 0.1,
-            api_multiplier: 16,
-        })
-    ];
     return gulp.src('app/'+syntax+'/**/*.'+syntax+'')
         .pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
         .pipe(rename({ suffix: '.min', prefix : '' }))
         .pipe(autoprefixer(['last 15 versions']))
         .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
-        .pipe(postcss(processors))
-        .pipe(postcss(processors2))
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.stream())
 });

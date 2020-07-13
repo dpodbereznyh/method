@@ -29,7 +29,7 @@
                 <!--</a>-->
             <!--</div>-->
         <!--</div>-->
-        <header class="header">
+        <!--<header class="header">
 
             <div class="HYPE_element_container" style="">
                 <div class="HYPE_element" id="hype-obj-XSO43M28CZDW6TDN3PJL" hype_scene_index="2" style="" role="img"></div>
@@ -90,7 +90,7 @@
                     </button>
             </div>
         </header>
-    <!--<section class="section about" id="about" >
+    <section class="section about" id="about" >
         <div class="about__bg-gradient"></div>
         <div class="HYPE_element_container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none; z-index: 2;">
             <div class="HYPE_element" style="pointer-events: auto; position: absolute; background: #8CD9B3; background-repeat: no-repeat; overflow: visible; background-size: cover; display: inline; z-index: 2; opacity: 0.910799; width: 100%; height: 100%;" role="img"></div>
@@ -210,11 +210,11 @@
     <section class="team" id="team">
         <div class="swiper-container team__swiper-container">
             <div class="swiper-wrapper team__swiper-wrapper">
-                <div class="swiper-slide team__swiper-slide">
+                <div class="swiper-slide team__swiper-slide team__video-overlay">
                     <video src="img/team/6f52675d14.720.mp4" class="team__swiper-slide-video" autoplay="autoplay" loop="loop" muted="muted">
 
                     </video>
-
+                    <div class="team__video-overlay-bg"></div>
                     <h2 class="section__title team__title">
                         Индивидуально подходим к каждому проекту, что помогает обеспечивать высокую эффективность, которую можно замерить в рублях.
                     </h2>
@@ -245,15 +245,13 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="section__head">
-                <h2 class="section__title about__title">
+            <div class="cases__head_nav">
+                <h2 class="section__title cases__title">
                     Кейсы
                 </h2>
-                <div class="section__head_nav">
-                    <a href="#" class="section__btn cases__head_btn">
-                        Заказать проект
-                    </a>
-                </div>
+                <a href="#" class="section__btn cases__head_btn">
+                    Заказать проект
+                </a>
             </div>
             <p class="section__desc cases__desc">
                 Но действия представителей оппозиции неоднозначны и будут объявлены нарушающими общечеловеческие нормы этики и морали. Предприниматели в сети интернет будут превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Как уже неоднократно упомянуто, реплицированные с зарубежных источников, современные исследования призывают нас к новым свершениям
@@ -331,7 +329,7 @@
             </a>
         </div>
     </section>
-    <section class="section development" id="development">
+    <!--<section class="section development" id="development">
         <div class="development__bg-gradient"></div>
         <div class="HYPE_element_container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none; z-index: 2;">
             <div class="HYPE_element" style="pointer-events: auto; position: absolute; background: #9937B7; background-repeat: no-repeat; overflow: visible; background-size: cover; display: inline; z-index: 2; opacity: 0.884246; width: 100%; height: 100%; top: 0; left: 0;" role="img"></div>
@@ -387,12 +385,13 @@
                     </li>
                     </li>
                 </ul>
-                <div class="development__stage_wrap">
+
                     <ul class="development__stage_list">
+                        <div class="development__stage_list-circle"></div>
+                        <div class="development__stage_list-blur"></div>
                         <p class="development__stage_inner-text">
                             6 простых шагов
                         </p>
-                        <div class="development__stage_inner"></div>
                         <div class="development__stage_title">
                             <p>
                                 Сайт готов
@@ -469,11 +468,11 @@
                             </p>
                         </li>
                     </ul>
-                </div>
+
             </div>
         </div>
     </section>
-    <section class="promotion" id="promotion">
+   <section class="promotion" id="promotion">
         <div class="promotion__bg-gradient"></div>
         <div class="HYPE_element_container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none; z-index: 2;">
             <div class="HYPE_element" style="pointer-events: auto; position: absolute; background: #3A3EB9; background-repeat: no-repeat; overflow: visible; background-size: cover; display: inline; z-index: 2; opacity: 0.884246; width: 100%; height: 100%; top: 0; left: 0;" role="img"></div>
@@ -564,21 +563,19 @@
                             <div class="promotion__stage_num">
                                 3
                             </div>
+                            <div class="promotion__stage_finish">
+                                <img src="img/promotion/finish-icon.svg" alt="">
+                            </div>
                         </div>
                         <div class="promotion__stage_icon">
                             <img src="img/promotion/promotion-stage3.svg" alt="">
                         </div>
                     </li>
-                    <li class="promotion__stage_item">
 
-                        <div class="promotion__stage_finish">
-                            <img src="img/promotion/finish-icon.svg" alt="">
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
-    </section>
+    </section>-->
     <section class="section audit" id="audit">
         <div class="audit__bg-gradient"></div>
         <div class="HYPE_element_container" style="background: rgba(242, 80, 117, 0.9); position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none; z-index: 2;">
@@ -652,6 +649,9 @@
                                 <img src="img/audit/stage-arrow.svg" alt="">
                             </div>
                         </div>
+                        <div class="audit__stage_item-arrow audit__stage_item-arrow-mob">
+                            <img src="img/audit/stage-arrow.svg" alt="">
+                        </div>
                     </li>
                     <li class="audit__stage_item audit__stage_item-odd">
                         <div class="audit__stage_icon audit__stage_icon-odd">
@@ -667,6 +667,9 @@
                         <p class="audit__stage_title audit__stage_title-odd">
                             МЫ САМОСТОЯТЕЛЬНО ПРОВОДИМ АУДИТ
                         </p>
+                        <div class="audit__stage_item-arrow audit__stage_item-arrow-mob">
+                            <img src="img/audit/stage-arrow.svg" alt="">
+                        </div>
                     </li>
                     <li class="audit__stage_item">
                         <p class="audit__stage_title">
@@ -676,22 +679,25 @@
                             <div class="audit__stage_icon-blur"></div>
                             <div class="audit__stage_item-blur"></div>
                             <div class="audit__stage_image">
-                                <img src="img/audit/audit-stage1.svg" alt="">
+                                <img src="img/audit/audit-stage3.svg" alt="">
                             </div>
                             <div class="audit__stage_item-arrow">
                                 <img src="img/audit/stage-arrow.svg" alt="">
                             </div>
                         </div>
+                        <div class="audit__stage_finish">
+                            <img src="img/promotion/finish-icon.svg" alt="">
+                        </div>
+                        <div class="audit__stage_item-arrow audit__stage_item-arrow-mob">
+                            <img src="img/audit/stage-arrow.svg" alt="">
+                        </div>
                     </li>
-                    <div class="audit__stage_finish">
-                        <img src="img/promotion/finish-icon.svg" alt="">
-                    </div>
                 </ul>
 
             </div>
         </div>
     </section>
-    <section class="contacts" id="contacts">
+    <!--<section class="contacts" id="contacts">
         <div class="contacts__bg-gradient"></div>
         <div class="container-fluid">
             <h2 class="section__title contacts__title">

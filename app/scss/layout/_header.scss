@@ -85,7 +85,7 @@
 }
 .header {
   position: relative;
-  padding-bottom: 164px;
+  padding-bottom: 64px;
   >.container-fluid {
     display: flex;
     flex-direction: column;
@@ -173,7 +173,7 @@
   background: $pinkMain;
   display: inline-block;
   margin-left: 128px;
-  margin-top: 99px;
+  margin-top: 64px;
   text-transform: uppercase;
   max-width: 408px;
   transition: all .3s ease;
@@ -184,80 +184,82 @@
 }
 
 @include desktop {
-
+  .offer__price p {
+    font-size: 82px;
+  }
 }
-//@include laptop {
-//  .offer__text {
-//    margin: 0 auto;
-//    width: auto;
-//  }
-//  .btn__offer {
-//    margin: 0 auto;
-//  }
-//  .rectangle {
-//    width: 120px;
-//  }
-//  .offer__text_list {
-//    width: 90%;
-//  }
-//  .offer__price p {
-//    font-size: 64px;
-//  }
-//  .offer__text_item p {
-//    font-size: 22px;
-//  }
-//}
-//@include tablet {
-//  .offer__wrap {
-//    flex-direction: column;
-//    align-items: center;
-//  }
-//  .rectangle {
-//    width: 80px;
-//  }
-//  .offer__text_list {
-//    width: 100%;
-//  }
-//  .offer__price p {
-//    line-height: 76px;
-//  }
-//  .btn__offer {
-//    font-size: 20px;
-//  }
-//  .arrow__down {
-//    width: 35px;
-//    height: 35px;
-//  }
-//}
-//@include phones {
-//  .offer__text_list {
-//    position: relative;
-//    width: 100%;
-//    margin: 16px 0;
-//    padding: 16px 16px 1px 16px;
-//  }
-//  .offer__text_item p {
-//    font-size: 18px;
-//    line-height: 36px;
-//  }
-//  .offer__price p {
-//    font-size: 44px;
-//    line-height: 76px;
-//  }
-//  .btn__offer {
-//    font-size: 14px;
-//  }
-//  .arrow__down {
-//    width: 30px;
-//    height: 30px;
-//  }
-//}
+@include laptop {
+  .offer__text {
+    margin: 0 auto;
+    width: auto;
+  }
+  .btn__offer {
+    margin: 0 auto;
+  }
+  .rectangle {
+    width: 120px;
+  }
+  .offer__text_list {
+    width: 90%;
+  }
+  .offer__price p {
+    font-size: 64px;
+  }
+  .offer__text_item p {
+    font-size: 22px;
+  }
+}
+@include tablet {
+  .offer__wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .rectangle {
+    width: 80px;
+  }
+  .offer__text_list {
+    width: 100%;
+  }
+  .offer__price p {
+    line-height: 76px;
+  }
+  .btn__offer {
+    font-size: 20px;
+  }
+  .arrow__down {
+    width: 35px;
+    height: 35px;
+  }
+}
+@include phones {
+  .offer__text_list {
+    position: relative;
+    width: 100%;
+    margin: 16px 0;
+    padding: 16px 16px 1px 16px;
+  }
+  .offer__text_item p {
+    font-size: 18px;
+    line-height: 36px;
+  }
+  .offer__price p {
+    font-size: 44px;
+    line-height: 76px;
+  }
+  .btn__offer {
+    font-size: 14px;
+  }
+  .arrow__down {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 //Smart Menu
 .main-nav {
   background: transparent;
   padding-top: 53px;
-  margin-bottom: 234px;
+  margin-bottom: 100px;
   z-index: 3;
 }
 .sm-simple>li>a {
