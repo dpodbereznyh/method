@@ -1,5 +1,31 @@
 $(document).ready(function () {
 
+    $(".header__nav_link").click(function() {
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top
+        }, {
+            duration: 700,
+            easing: "swing"
+        });
+        return false;
+    });
+
+
+    $("#navToggle").click(function() {
+        $(this).toggleClass("active");
+        $(".overlay").toggleClass("open");
+        // this line ▼ prevents content scroll-behind
+        $("body").toggleClass("locked");
+    });
+    $(".overlayMenu>ul>li>a").click(function() {
+        $(".navBurger").removeClass("active");
+        $(".overlay").removeClass("open");
+        // this line ▼ prevents content scroll-behind
+        $("body").removeClass("locked");
+    });
+
+
+
 // SmartMenus init
     $(function() {
         $('#main-menu').smartmenus({

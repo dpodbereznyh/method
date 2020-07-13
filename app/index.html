@@ -14,23 +14,35 @@
 
 <body>
 <main class="main">
-        <!--<div class="overlay__nav">-->
-            <!--<div class="container-fluid">-->
-                <!--<ul class="overlay__nav_dots_list">-->
-                    <!--<li class="overlay__nav__dotts_item"></li>-->
-                    <!--<li class="overlay__nav__dotts_item"></li>-->
-                    <!--<li class="overlay__nav__dotts_item"></li>-->
-                    <!--<li class="overlay__nav__dotts_item"></li>-->
-                    <!--<li class="overlay__nav__dotts_item"></li>-->
-                    <!--<li class="overlay__nav__dotts_item"></li>-->
-                <!--</ul>-->
-                <!--<a href="#" class="overlay__nav_arrow">-->
-                    <!--<img src="img/header/arrow-down.svg" alt="arrow">-->
-                <!--</a>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<header class="header">
+    <a href="#" class="overlay__nav_arrow">
+        <img src="img/header/arrow-down.svg" alt="arrow">
+    </a>
+    <ul class="overlay__nav_dots_list">
+        <li class="overlay__nav__dotts_item"></li>
+        <li class="overlay__nav__dotts_item"></li>
+        <li class="overlay__nav__dotts_item"></li>
+        <li class="overlay__nav__dotts_item"></li>
+        <li class="overlay__nav__dotts_item"></li>
+        <li class="overlay__nav__dotts_item"></li>
+    </ul>
+    <div class="overlay">
+        <nav class="overlayMenu">
+            <ul role="menu">
+                <li class="header__nav_item"><a href="/" class="header__nav_link">Главная</a></li>
+                <li class="header__nav_item"><a href="#about" class="header__nav_link">О компании</a></li>
+                <li class="header__nav_item"><a href="#development" class="header__nav_link">Разработка сайтов</a></li>
+                <li class="header__nav_item"><a href="#promotion" class="header__nav_link">Реклама для бизнеса</a></li>
+                <li class="header__nav_item"><a href="#audit" class="header__nav_link">Аудит и консалтинг</a></li>
+                <li class="header__nav_item"><a href="#contacts" class="header__nav_link">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
 
+    <div class="navBurger" role="navigation" id="navToggle"></div>
+
+
+
+        <header class="header">
             <div class="HYPE_element_container" style="">
                 <div class="HYPE_element" id="hype-obj-XSO43M28CZDW6TDN3PJL" hype_scene_index="2" style="" role="img"></div>
             </div>
@@ -48,12 +60,12 @@
                     </label>
 
                     <ul id="main-menu" class="sm sm-simple">
-                        <li class="header__nav_item"><a href="#" class="header__nav_link">Главная</a></li>
-                        <li class="header__nav_item"><a href="#" class="header__nav_link">О компании</a></li>
-                        <li class="header__nav_item"><a href="#" class="header__nav_link">Разработка сайтов</a></li>
-                        <li class="header__nav_item"><a href="#" class="header__nav_link">Реклама для бизнеса</a></li>
-                        <li class="header__nav_item"><a href="#" class="header__nav_link">Аудит и консалтинг</a></li>
-                        <li class="header__nav_item"><a href="#" class="header__nav_link">Контакты</a></li>
+                        <li class="header__nav_item"><a href="/" class="header__nav_link">Главная</a></li>
+                        <li class="header__nav_item"><a href="#about" class="header__nav_link">О компании</a></li>
+                        <li class="header__nav_item"><a href="#development" class="header__nav_link">Разработка сайтов</a></li>
+                        <li class="header__nav_item"><a href="#promotion" class="header__nav_link">Реклама для бизнеса</a></li>
+                        <li class="header__nav_item"><a href="#audit" class="header__nav_link">Аудит и консалтинг</a></li>
+                        <li class="header__nav_item"><a href="#contacts" class="header__nav_link">Контакты</a></li>
                     </ul>
 
                 </nav>
@@ -329,7 +341,7 @@
             </a>
         </div>
     </section>
-    <!--<section class="section development" id="development">
+    <section class="section development" id="development">
         <div class="development__bg-gradient"></div>
         <div class="HYPE_element_container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none; z-index: 2;">
             <div class="HYPE_element" style="pointer-events: auto; position: absolute; background: #9937B7; background-repeat: no-repeat; overflow: visible; background-size: cover; display: inline; z-index: 2; opacity: 0.884246; width: 100%; height: 100%; top: 0; left: 0;" role="img"></div>
@@ -575,7 +587,7 @@
                 </ul>
             </div>
         </div>
-    </section>-->
+    </section>
     <section class="section audit" id="audit">
         <div class="audit__bg-gradient"></div>
         <div class="HYPE_element_container" style="background: rgba(242, 80, 117, 0.9); position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none; z-index: 2;">
@@ -697,7 +709,7 @@
             </div>
         </div>
     </section>
-    <!--<section class="contacts" id="contacts">
+    <section class="contacts" id="contacts">
         <div class="contacts__bg-gradient"></div>
         <div class="container-fluid">
             <h2 class="section__title contacts__title">
@@ -710,12 +722,14 @@
                             <div class="contacts__contact_image_blur contacts__contact_image_blur-envelope"></div>
                             <img class="contacts__contact_image_icon contacts__contact_image_icon-envelope" src="img/contacts/envelope-icon.png" alt="">
                         </div>
-                        <p class="contacts__contact_image_title">
-                            Написать нам письмо
-                        </p>
-                        <a href="mailto:INFO@METHOD-MS.RU" class="contacts__contact_image_desc">
-                            INFO@METHOD-MS.RU
-                        </a>
+                        <div class="contacts__contact_image_title-wrap">
+                            <p class="contacts__contact_image_title">
+                                Написать нам письмо
+                            </p>
+                            <a href="mailto:INFO@METHOD-MS.RU" class="contacts__contact_image_desc">
+                                INFO@METHOD-MS.RU
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -725,12 +739,14 @@
                             <img class="contacts__contact_image_icon contacts__contact_image_icon-phone" src="img/contacts/phone-icon.png" alt="">
 
                         </div>
-                        <p class="contacts__contact_image_title">
-                            Заказать звонок
-                        </p>
-                        <a href="mailto:88002011442" class="contacts__contact_image_desc">
-                            8(800)201-14-42
-                        </a>
+                        <div class="contacts__contact_image_title-wrap">
+                            <p class="contacts__contact_image_title">
+                                Заказать звонок
+                            </p>
+                            <a href="mailto:88002011442" class="contacts__contact_image_desc">
+                                8 (800) 201-14-42
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -740,19 +756,21 @@
                             <img class="contacts__contact_image_icon contacts__contact_image_icon-location" src="img/contacts/location-icon.png" alt="">
 
                         </div>
-                        <p class="contacts__contact_image_title">
-                            Приехать в гости
-                        </p>
-                        <a href="mailto:88002011442" class="contacts__contact_image_desc">
-                            г. Владимир,<br> ул. Б.Нижегородская 44
-                        </a>
+                        <div class="contacts__contact_image_title-wrap">
+                            <p class="contacts__contact_image_title">
+                                Приехать в гости
+                            </p>
+                            <a href="mailto:88002011442" class="contacts__contact_image_desc">
+                                г. Владимир,<br> ул. Б.Нижегородская 44
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
 </main>
-<!--<footer class="footer" id="footer">
+<footer class="footer" id="footer">
     <div class="container-fluid">
         <bottom class="contacts__btn btn">
             Заказать услугу
@@ -785,7 +803,7 @@
         </a>
     </div>
     <div class="footer__blur"></div>
-</footer>-->
+</footer>
 
 
 

@@ -1,11 +1,166 @@
 .main {
   position: relative;
 }
-.overlay__nav {
+.navBurger {
   position: fixed;
+  right: 55px;
+  top: 64px;
+  cursor: pointer;
+  background: $white;
+  box-sizing: border-box;
+  background-clip: content-box;
+  width: 30px;
+  height: 24px;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  z-index: 5555555;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background: $white;
+    height: 2px;
+    width: 100%;
+    right: 0;
+    will-change: rotate;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  &:before {
+    top: -10px;
+  }
+  &:after {
+    bottom: -10px;
+    //width: 90%;
+  }
+  &.active {
+    background: transparent;
+    background-clip: content-box;
+  }
+  &.active:before {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: 0;
+    background: #eee;
+    width: 110%;
+  }
+  &.active:after {
+    bottom: 0;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    background: #eee;
+    width: 110%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  background: #1a1a1a;
+  top: 0;
+  right: 0;
   width: 100%;
-  height: 100vh;
-  z-index: 3;
+  height: 100%;
+  opacity: 0;
+  transform-origin: right top;
+  transform: scale(0);
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  z-index: 55555;
+  &.open {
+    opacity: 0.9;
+    visibility: visible;
+    transform: scale(1);
+    li {
+      display: block;
+      animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5)
+      forwards;
+      animation-delay: 0.4s;
+      transform: rotate(-7deg);
+      transform-origin: right bottom;
+      &:nth-of-type(2) {
+        animation-delay: 0.5s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 0.6s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: 0.7s;
+      }
+      &:nth-of-type(5) {
+        animation-delay: 0.8s;
+      }
+    }
+  }
+}
+
+.overlayMenu {
+  position: absolute;
+  text-align: right;
+  right: 55px;
+  bottom: 50%;
+  transform: translate(0, 50%);
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    height: 100%;
+    li {
+      display: block;
+      position: relative;
+      opacity: 0;
+      width: 100%;
+      a {
+        display: inline-block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+        color: #fff;
+        text-decoration: none;
+        font-size: 28px;
+        padding: 16px 32px;
+        margin: 5px 0;
+        transition: 0.2s;
+        &:hover,
+        &:active,
+        &:focus {
+          transform: translateX(-2px);
+        }
+      }
+    }
+  }
+}
+
+.locked {
+  overflow: hidden;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 50px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
+
+
+
+.overlay__nav {
+
   >.container-fluid {
     position: relative;
     height: 100vh;
@@ -28,10 +183,11 @@
     flex-direction: column;
     justify-content: space-between;
     height: 230px;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 50%;
-    transform: translate(-400%, -50%);
+    transform: translate(100%, -50%);
+    z-index: 555555;
   }
   &__dotts_item {
     width: 11px;
@@ -46,14 +202,15 @@
     background: rgba(255, 255, 255, 0.25);
     border: 1px solid #FFFFFF;
     border-radius: 50%;
-    position: relative;
+    position: fixed;
     margin-left: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     bottom: 64px;
     right: 0;
+    transform: translate(-100%, 0);
+    z-index: 55555;
     img {
       max-width: 100%;
       display: inline-block;
