@@ -311,6 +311,12 @@
   .about__desc_gallery_item {
     margin-bottom: 64px;
   }
+  .work-vector__item_blur {
+    left: -19px;
+  }
+  .work-vector__item_cont {
+    left: 0;
+  }
 }
 
 //Team
@@ -926,6 +932,59 @@
   }
   .development__item_btn {
     width: 275px;
+  }
+  .development__list {
+    margin-bottom: 64px;
+  }
+  .development__stage_list {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 16px;
+    height: auto;
+  }
+  .development__stage_list-circle {
+    display: none;
+  }
+  .development__stage_list-blur {
+    width: 300px;
+    height: 500px;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .development__stage_title {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  .development__stage_item {
+    position: static;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+  .development__stage_item-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+    order: 1;
+  }
+  .development__stage_item-icon {
+    order: 3;
+    margin-right: 0;
+  }
+  .development__stage_item-num {
+    order: 2;
+  }
+  .development__stage_inner-text {
+    position: static;
+    margin: 0 auto;
+    text-align: center;
   }
   //.development__stage_list-circle
 }

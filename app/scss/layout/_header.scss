@@ -243,8 +243,8 @@
     align-items: center;
     justify-content: center;
     bottom: 64px;
-    right: 0;
-    transform: translate(-100%, 0);
+    right: 32px;
+    transform: translate(-50%, 0);
     z-index: 55555;
     cursor: pointer;
     img {
@@ -445,6 +445,10 @@
   .arrow__down {
     width: 30px;
     height: 30px;
+  }
+  .overlay__nav_arrow {
+    transform: translate(0,0);
+    bottom: 32px;
   }
 }
 
