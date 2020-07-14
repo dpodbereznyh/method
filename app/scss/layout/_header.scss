@@ -2,6 +2,7 @@
   position: relative;
 }
 .navBurger {
+  display: none;
   position: fixed;
   right: 55px;
   top: 64px;
@@ -17,7 +18,7 @@
   transform: rotate(0deg);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  z-index: 5555555;
+  z-index: 6;
   &:before,
   &:after {
     content: "";
@@ -152,7 +153,18 @@
     transform: rotate(0deg);
   }
 }
-
+@include phones {
+  .navBurger {
+    right: 32px;
+    top: 32px;
+  }
+  .overlayMenu {
+    right: 32px;
+  }
+  .overlayMenu ul li a {
+    font-size: 20px;
+  }
+}
 
 
 
@@ -195,8 +207,30 @@
     border-radius: 50%;
     background: $white;
   }
+  //&_arrow-up {
+  //  width: 45px;
+  //  height: 45px;
+  //  background: rgba(255, 255, 255, 0.25);
+  //  border: 1px solid #FFFFFF;
+  //  border-radius: 50%;
+  //  position: fixed;
+  //  margin-left: auto;
+  //  display: flex;
+  //  align-items: center;
+  //  justify-content: center;
+  //  bottom: 64px;
+  //  right: 0;
+  //  transform: translate(-100%, 0);
+  //  z-index: 55555;
+  //  img {
+  //    transform: rotate(180deg);
+  //    max-width: 100%;
+  //    display: none;
+  //    width: 10px;
+  //    height: auto;
+  //  }
+  //}
   &_arrow {
-    display: block;
     width: 45px;
     height: 45px;
     background: rgba(255, 255, 255, 0.25);
@@ -211,6 +245,7 @@
     right: 0;
     transform: translate(-100%, 0);
     z-index: 55555;
+    cursor: pointer;
     img {
       max-width: 100%;
       display: inline-block;
