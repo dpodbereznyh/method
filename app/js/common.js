@@ -1,6 +1,7 @@
+
 $(document).ready(function () {
 
-    $(".header__nav_link").click(function() {
+    $(".header__nav_link, .overlay__nav__dotts_item a").click(function() {
         $("html, body").animate({
             scrollTop: $($(this).attr("href")).offset().top
         }, {
@@ -44,13 +45,6 @@ $(document).ready(function () {
             return false;
         });
     });
-    // $(function(){
-    //     $('.overlay__nav_arrow-up').click(function(){
-    //         $('html, body').animate({scrollTop: 0}, 600);
-    //
-    //         return false;
-    //     });
-    // });
 
     //Popup Form
     $(document).on( "click", ".popup-btn", function() {
@@ -80,6 +74,7 @@ $(document).ready(function () {
             subMenusSubOffsetY: 0
         });
     });
+
 
 // SmartMenus mobile menu toggle button
     $(function() {
@@ -119,59 +114,37 @@ $(document).ready(function () {
         }
     });
 
-    // $(document).on("click", ".jsBtn", function () {
-    //     var newinput = this.getAttribute('data-input');
-    //     var newtitle = this.getAttribute('data-title');
-    //     jsInput.setAttribute('value', newinput);
-    //     jsTitle.setAttribute('value', newtitle);
-    // });
 
-    // $(".popup-form").submit(function () {
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "send.php",
-    //         data: $(this).serialize()
-    //     }).done(function () {
-    //         // $(this).find("input").val("");
-    //         parent.jQuery.fancybox.getInstance().close();
-    //         $.fancybox.open({
-    //             src: '#fancyalert',
-    //         });
-    //         $(".popup-form").trigger("reset");
-    //     });
-    //     return false;
-    // });
-
-
-    // $("#formt-questions").submit(function () {
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "send.php",
-    //         data: $(this).serialize()
-    //     }).done(function () {
-    //         // $(this).find("input").val("");
-    //         $.fancybox.open({
-    //             src: '#fancyalert',
-    //         });
-    //         $("#formt-questions").trigger("reset");
-    //     });
-    //     return false;
-    // });
-
-
-    // $("#excursion__form").submit(function () {
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "send.php",
-    //         data: $(this).serialize()
-    //     }).done(function () {
-    //         // $(this).find("input").val("");
-    //         $.fancybox.open({
-    //             src: '#fancyalert',
-    //         });
-    //         $("#excursion__form").trigger("reset");
-    //     });
-    //     return false;
-    // });
 
 });
+//Pagination
+
+// screens = [
+//     {name: 'header'},
+//     {name: 'about'},
+//     {name: 'team'},
+//     {name: 'cases'},
+//     {name: 'development'},
+//     {name: 'promotion'},
+//     {name: 'audit'},
+//     {name: 'contacts'},
+// ];
+let paginationDotsList = document.querySelector('.overlay__nav_dots_list');
+let countDotItem = document.querySelectorAll('section');
+let paginationDotItem;
+let active;
+
+let items = document.querySelector('.overlay__nav_dots_list li')
+for (i = 1; i <= countDotItem.length + 2; i++) {
+    paginationDotItem = document.createElement('li');
+    paginationDotItem.innerHTML = i;
+    paginationDotsList.appendChild(paginationDotItem);
+    paginationDotItem.addEventListener('click', function () {
+        if (active) {
+            active.classList.remove('active');
+        }
+        active = this;
+        this.classList.add('active');
+    });
+};
+
