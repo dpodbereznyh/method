@@ -25,6 +25,27 @@ $(document).ready(function () {
     });
 
 
+    $('#fullpage').fullpage({
+        //options here
+        autoScrolling:true,
+        scrollHorizontally: true,
+        anchors:['firstPage', 'about'],
+        navigation: false,
+        navigationPosition: 'right',
+        // navigationTooltips: ['header', 'about'],
+        showActiveTooltip: true,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom'
+    });
+
+    //methods
+    $.fn.fullpage.setAllowScrolling(false);
+
+
+
+
+
+
     $("#navToggle").click(function() {
         $(this).toggleClass("active");
         $(".overlay").toggleClass("open");
@@ -119,32 +140,56 @@ $(document).ready(function () {
 });
 //Pagination
 
-// screens = [
-//     {name: 'header'},
-//     {name: 'about'},
-//     {name: 'team'},
-//     {name: 'cases'},
-//     {name: 'development'},
-//     {name: 'promotion'},
-//     {name: 'audit'},
-//     {name: 'contacts'},
-// ];
-let paginationDotsList = document.querySelector('.overlay__nav_dots_list');
-let countDotItem = document.querySelectorAll('section');
-let paginationDotItem;
-let active;
 
-let items = document.querySelector('.overlay__nav_dots_list li')
-for (i = 1; i <= countDotItem.length + 2; i++) {
-    paginationDotItem = document.createElement('li');
-    paginationDotItem.innerHTML = i;
-    paginationDotsList.appendChild(paginationDotItem);
-    paginationDotItem.addEventListener('click', function () {
-        if (active) {
-            active.classList.remove('active');
-        }
-        active = this;
-        this.classList.add('active');
-    });
-};
+// let paginationDotsList = document.querySelector('.overlay__nav_dots_list');
+// let countDotItem = document.querySelectorAll('section');
+// let items = [];
+// let activeItem;
+// let itemActiveText;
+//
+// // let item = document.querySelector('overlay__nav__dotts_item');
+// // item.addListener('click', function () {
+// //     this.scrollIntoView();
+// // })
+//
+// for (i = 1; i <= countDotItem.length + 2; i++) {
+//     paginationDotItem = document.createElement('li');
+//     paginationDotItem.innerHTML = i;
+//     paginationDotsList.appendChild(paginationDotItem);
+//     items.push(paginationDotItem);
+// };
+// getActiveItem(items[0]);
+// for (let item of items) {
+//     item.addEventListener('click', function () {
+//         getActiveItem(this);
+//         itemActiveText = this.innerHTML;
+//         console.log(itemActiveText);
+//         itemClick();
+//     });
+//
+// };
+// function getActiveItem(item){
+//     if (activeItem) {
+//         activeItem.classList.remove('active-item');
+//     }
+//     activeItem = item;
+//     item.classList.add('active-item');
+// }
+// function itemClick() {
+//     hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
+// }
+
+
+// for (i = 1; i <= countDotItem.length + 2; i++) {
+//     paginationDotItem = document.createElement('li');
+//     paginationDotItem.innerHTML = i;
+//     paginationDotsList.appendChild(paginationDotItem);
+//     paginationDotItem.addEventListener('click', function () {
+//         if (active) {
+//             active.classList.remove('active');
+//         }
+//         active = this;
+//         this.classList.add('active');
+//     });
+// };
 

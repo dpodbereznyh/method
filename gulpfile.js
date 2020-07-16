@@ -46,10 +46,11 @@ gulp.task('scripts', function() {
         'app/js/vendors/jquery.smartmenus.min.js',
         'app/js/vendors/swiper.min.js',
         'app/js/vendors/jquery.fancybox.min.js',
+        'app/js/vendors/fullpage.min.js',
         'app/js/common.js', // Always at the end
     ])
         .pipe(concat('scripts.min.js'))
-        // .pipe(uglify())
+        .pipe(uglify())
         .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
         .pipe(gulp.dest('app/js'))
         .pipe(browserSync.reload({ stream: true }))
