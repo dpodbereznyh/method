@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
 
-    $(".header__nav_link, .overlay__nav__dotts_item a").click(function() {
+    $(".header__nav_link").click(function() {
         $("html, body").animate({
             scrollTop: $($(this).attr("href")).offset().top
         }, {
@@ -25,21 +25,13 @@ $(document).ready(function () {
     });
 
 
-    $('#fullpage').fullpage({
-        //options here
-        autoScrolling:true,
-        scrollHorizontally: true,
-        anchors:['firstPage', 'about'],
-        navigation: false,
-        navigationPosition: 'right',
-        // navigationTooltips: ['header', 'about'],
-        showActiveTooltip: true,
-        slidesNavigation: true,
-        slidesNavPosition: 'bottom'
-    });
+    (function($){
+        $(window).on("load",function(){
+            $(".overlay__nav__dotts_item a").mPageScroll2id();
+        });
+    })(jQuery);
 
-    //methods
-    $.fn.fullpage.setAllowScrolling(false);
+
 
 
 
