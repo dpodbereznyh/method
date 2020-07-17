@@ -265,7 +265,7 @@
     background: rgba(255, 255, 255, 0.25);
     border: 1px solid #FFFFFF;
     border-radius: 50%;
-    position: fixed;
+    //position: absolute;
     margin-left: auto;
     display: flex;
     align-items: center;
@@ -458,6 +458,9 @@
     width: 100%;
     margin: 16px 0;
     padding: 16px 16px 1px 16px;
+  }
+  .offer__text {
+    padding: 0 15px;
   }
   .offer__text_item p {
     font-size: 18px;

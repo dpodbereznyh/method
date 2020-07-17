@@ -51,13 +51,13 @@ $(document).ready(function () {
         $("body").removeClass("locked");
     });
 
-    $(function(){
-        $('.overlay__nav_arrow').click(function(){
-            $('html, body').animate({scrollTop: $(document).height() - $(window).height()}, 600);
-            $('.overlay__nav_arrow').toggleClass('overlay__nav_arrow-up');
-            return false;
-        });
-    });
+    // $(function(){
+    //     $('.overlay__nav_arrow').click(function(){
+    //         $('html, body').animate({scrollTop: $(document).height() - $(window).height()}, 600);
+    //         $('.overlay__nav_arrow').toggleClass('overlay__nav_arrow-up');
+    //         return false;
+    //     });
+    // });
 
     //Popup Form
     $(document).on( "click", ".popup-btn", function() {

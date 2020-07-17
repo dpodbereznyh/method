@@ -51,6 +51,9 @@
   .section__head {
     justify-content: center;
   }
+  .section__desc {
+    padding: 0 15px;
+  }
 }
 .navbar {
   width: 30px;
@@ -928,13 +931,14 @@
     align-items: center;
   }
   .development__item {
-    padding: 32px 16px;
+    padding: 32px 10px;
   }
   .development__item_btn {
-    width: 275px;
+    font-size: 11px;
   }
   .development__list {
     margin-bottom: 64px;
+    padding: 0 15px;
   }
   .development__stage_list {
     width: 100%;
@@ -1180,8 +1184,17 @@
   .development__item_price {
     margin-bottom: 32px;
   }
+  .promotion__list_title {
+    padding: 0 15px;
+  }
+  .promotion__list {
+    padding: 0 15px;
+  }
+  .promotion__item {
+    padding: 32px 10px;
+  }
   .promotion__item_btn {
-    width: 275px;
+    font-size: 11px;
   }
   .promotion__stage_item {
     width: 100%;
@@ -1467,10 +1480,16 @@
 }
 @include phones {
   .audit__item {
-    padding: 32px 16px;
+    padding: 32px 10px;
+  }
+  .audit__desc {
+    padding: 0 15px;
+  }
+  .audit__list {
+    padding: 0 15px;
   }
   .audit__item_btn {
-    padding: 16px;
+    font-size: 11px;
   }
   .audit__stage_list {
     max-width: 100%;
@@ -1708,11 +1727,15 @@
   .contacts__contact_item {
     flex-direction: column;
     align-items: center;
+    padding: 0 15px;
   }
   .contacts__contact_image {
     margin: 0 0 30px;
   }
   .contacts__title {
     margin-bottom: 64px;
+  }
+  .contacts__social_title {
+    padding: 0 15px;
   }
 }
