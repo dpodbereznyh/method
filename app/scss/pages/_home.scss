@@ -1746,3 +1746,8 @@
     margin-bottom: 64px;
   }
 }
+@include laptop {
+  .gif {
+    display: none;
+  }
+}
