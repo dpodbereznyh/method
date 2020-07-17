@@ -47,6 +47,7 @@ gulp.task('scripts', function() {
         'app/js/vendors/swiper.min.js',
         'app/js/vendors/jquery.fancybox.min.js',
         'app/js/vendors/jquery.malihu.PageScroll2id.min.js',
+        'app/js/vendors/blazy.min.js',
         'app/js/common.js', // Always at the end
     ])
         .pipe(concat('scripts.min.js'))

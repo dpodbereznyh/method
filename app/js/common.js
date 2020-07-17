@@ -144,4 +144,7 @@ $(document).ready(function () {
             bulletActiveClass: 'team__swiper_bullet-active'
         }
     });
+    var bLazy = new Blazy({
+        offset: 10,
+    });
 });
