@@ -265,7 +265,7 @@
     background: rgba(255, 255, 255, 0.25);
     border: 1px solid #FFFFFF;
     border-radius: 50%;
-    //position: absolute;
+    position: absolute;
     margin-left: auto;
     display: flex;
     align-items: center;
@@ -403,7 +403,14 @@
     transition: all .3s ease;
   }
 }
-
+@media screen and (max-width: 1320px ) {
+  .main-nav {
+    padding: 53px 15px 0;
+  }
+  .offer__wrap {
+    padding: 0 15px;
+  }
+}
 @include desktop {
   .offer__price p {
     font-size: 82px;
@@ -451,6 +458,12 @@
     width: 35px;
     height: 35px;
   }
+  .overlay__nav_arrow {
+    transform: translate(0,0);
+    bottom: 16px;
+    width: 35px;
+    height: 35px;
+  }
 }
 @include phones {
   .offer__text_list {
@@ -458,9 +471,6 @@
     width: 100%;
     margin: 16px 0;
     padding: 16px 16px 1px 16px;
-  }
-  .offer__text {
-    padding: 0 15px;
   }
   .offer__text_item p {
     font-size: 18px;
@@ -477,10 +487,7 @@
     width: 30px;
     height: 30px;
   }
-  .overlay__nav_arrow {
-    transform: translate(0,0);
-    bottom: 32px;
-  }
+
 }
 
 //Smart Menu

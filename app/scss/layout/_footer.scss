@@ -90,3 +90,35 @@
     width: 88%;
   }
 }
+.overlay__nav_arrow-footer {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 64px;
+  right: 32px;
+  transform: translate(-50%, 0);
+  z-index: 55555;
+  cursor: pointer;
+  img {
+    max-width: 100%;
+    display: inline-block;
+    width: 10px;
+    height: auto;
+    transform: rotate(180deg);
+  }
+}
+@include phones {
+  .overlay__nav_arrow-footer {
+    transform: translate(0,0);
+    bottom: 16px;
+    width: 35px;
+    height: 35px;
+  }
+}

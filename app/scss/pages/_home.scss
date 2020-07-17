@@ -51,9 +51,6 @@
   .section__head {
     justify-content: center;
   }
-  .section__desc {
-    padding: 0 15px;
-  }
 }
 .navbar {
   width: 30px;
@@ -258,6 +255,12 @@
 .blur-cobalt {
   border: 66px solid $cobalt10;
 }
+
+@media screen and (max-width: 1320px ) {
+  .cases__head_nav, .cases__desc, .about__desc_info_desc  {
+    padding: 0 15px;
+  }
+}
 @include desktop {
   .about__desc_container {
     flex-direction: column;
@@ -325,6 +328,7 @@
 //Team
 
 .team {
+  position: relative;
   &__vertical__dots_list {
     height: 230px;
     top: 50%;
@@ -615,7 +619,10 @@
   .cases__title {
     margin-bottom: 32px;
   }
-}
+  .cases__desc {
+    padding: 0 15px;
+  }
+  }
 
 //Development
 
@@ -839,6 +846,11 @@
     }
   }
 }
+@media screen and (max-width: 1320px ) {
+  .section__head, .development__desc {
+    padding: 0 15px;
+  }
+}
 @media screen and (max-width: 1300px ){
   .development__list {
     width: 51%;
@@ -931,14 +943,13 @@
     align-items: center;
   }
   .development__item {
-    padding: 32px 10px;
+    padding: 32px 16px;
   }
   .development__item_btn {
-    font-size: 11px;
+    width: 275px;
   }
   .development__list {
     margin-bottom: 64px;
-    padding: 0 15px;
   }
   .development__stage_list {
     width: 100%;
@@ -1151,6 +1162,11 @@
     }
   }
 }
+@media screen and (max-width: 1320px ) {
+  .promotion__list_title {
+    padding: 0 15px;
+  }
+}
 @include desktop {
   .promotion__list {
     width: 66%;
@@ -1184,17 +1200,8 @@
   .development__item_price {
     margin-bottom: 32px;
   }
-  .promotion__list_title {
-    padding: 0 15px;
-  }
-  .promotion__list {
-    padding: 0 15px;
-  }
-  .promotion__item {
-    padding: 32px 10px;
-  }
   .promotion__item_btn {
-    font-size: 11px;
+    width: 275px;
   }
   .promotion__stage_item {
     width: 100%;
@@ -1425,6 +1432,11 @@
     }
   }
 }
+@media screen and (max-width: 1320px ) {
+  .audit__desc {
+    padding: 0 15px;
+  }
+}
 @include desktop {
   .audit__list {
     width: 46%;
@@ -1480,16 +1492,10 @@
 }
 @include phones {
   .audit__item {
-    padding: 32px 10px;
-  }
-  .audit__desc {
-    padding: 0 15px;
-  }
-  .audit__list {
-    padding: 0 15px;
+    padding: 32px 16px;
   }
   .audit__item_btn {
-    font-size: 11px;
+    padding: 16px;
   }
   .audit__stage_list {
     max-width: 100%;
@@ -1689,6 +1695,11 @@
     }
   }
 }
+@media screen and (max-width: 1320px ) {
+  .contacts__title, .contacts__social_title {
+    padding: 0 15px;
+  }
+}
 @include desktop {
   .contacts__contact_image_blur {
     width: 170px;
@@ -1727,15 +1738,11 @@
   .contacts__contact_item {
     flex-direction: column;
     align-items: center;
-    padding: 0 15px;
   }
   .contacts__contact_image {
     margin: 0 0 30px;
   }
   .contacts__title {
     margin-bottom: 64px;
-  }
-  .contacts__social_title {
-    padding: 0 15px;
   }
 }

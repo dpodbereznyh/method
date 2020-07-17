@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
 
-    $(".header__nav_link").click(function() {
+    $(".header__nav_link, .overlay__nav_arrow-footer").click(function() {
         $("html, body").animate({
             scrollTop: $($(this).attr("href")).offset().top
         }, {
@@ -24,19 +24,45 @@ $(document).ready(function () {
 
     });
 
-
+    //Pagination
     (function($){
         $(window).on("load",function(){
-            $(".overlay__nav__dotts_item a").mPageScroll2id();
+
+            /* Page Scroll to id fn call */
+            $(".overlay__nav__dotts_item a").mPageScroll2id({
+                highlightSelector:".overlay__nav__dotts_item a",
+                clickEvents:true
+            });
+
+            /* jquery.address fn */
+            // $.address.change(function(event) {
+            //     var hash=event.value.split("/")[1] || "#header";
+            //     $.mPageScroll2id("scrollTo",hash,{
+            //         clicked:$("a[href='"+hash+"']")
+            //     });
+            // });
+
+            $("#navigation-menu a,a[href='#top'],a[rel='m_PageScroll2id']").click(function(e) {
+                e.preventDefault();
+                var href=$(this).attr("href");
+                if($.address.value()==="/"+href){
+                    $.address.history(false);
+                    $.address.value("#");
+                }else{
+                    $.address.history(true);
+                }
+                $.address.value($(this).attr("href"));
+            });
+
+            /* demo functions */
+            $("a[rel='next']").click(function(e){
+                e.preventDefault();
+                var to=$(this).parent(".section-scroll").next().attr("id");
+                $.mPageScroll2id("scrollTo",to);
+            });
+
         });
     })(jQuery);
-
-
-
-
-
-
-
 
     $("#navToggle").click(function() {
         $(this).toggleClass("active");
@@ -50,14 +76,6 @@ $(document).ready(function () {
         // this line ▼ prevents content scroll-behind
         $("body").removeClass("locked");
     });
-
-    // $(function(){
-    //     $('.overlay__nav_arrow').click(function(){
-    //         $('html, body').animate({scrollTop: $(document).height() - $(window).height()}, 600);
-    //         $('.overlay__nav_arrow').toggleClass('overlay__nav_arrow-up');
-    //         return false;
-    //     });
-    // });
 
     //Popup Form
     $(document).on( "click", ".popup-btn", function() {
@@ -126,62 +144,4 @@ $(document).ready(function () {
             bulletActiveClass: 'team__swiper_bullet-active'
         }
     });
-
-
-
 });
-//Pagination
-
-
-// let paginationDotsList = document.querySelector('.overlay__nav_dots_list');
-// let countDotItem = document.querySelectorAll('section');
-// let items = [];
-// let activeItem;
-// let itemActiveText;
-//
-// // let item = document.querySelector('overlay__nav__dotts_item');
-// // item.addListener('click', function () {
-// //     this.scrollIntoView();
-// // })
-//
-// for (i = 1; i <= countDotItem.length + 2; i++) {
-//     paginationDotItem = document.createElement('li');
-//     paginationDotItem.innerHTML = i;
-//     paginationDotsList.appendChild(paginationDotItem);
-//     items.push(paginationDotItem);
-// };
-// getActiveItem(items[0]);
-// for (let item of items) {
-//     item.addEventListener('click', function () {
-//         getActiveItem(this);
-//         itemActiveText = this.innerHTML;
-//         console.log(itemActiveText);
-//         itemClick();
-//     });
-//
-// };
-// function getActiveItem(item){
-//     if (activeItem) {
-//         activeItem.classList.remove('active-item');
-//     }
-//     activeItem = item;
-//     item.classList.add('active-item');
-// }
-// function itemClick() {
-//     hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
-// }
-
-
-// for (i = 1; i <= countDotItem.length + 2; i++) {
-//     paginationDotItem = document.createElement('li');
-//     paginationDotItem.innerHTML = i;
-//     paginationDotsList.appendChild(paginationDotItem);
-//     paginationDotItem.addEventListener('click', function () {
-//         if (active) {
-//             active.classList.remove('active');
-//         }
-//         active = this;
-//         this.classList.add('active');
-//     });
-// };
-
