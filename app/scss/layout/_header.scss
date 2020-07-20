@@ -416,6 +416,9 @@
   }
 }
 @include laptop {
+  header>.HYPE_element_container {
+    background: #8ACCE2;
+  }
   .offer__text {
     margin: 0 auto;
     width: auto;
