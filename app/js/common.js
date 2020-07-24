@@ -129,22 +129,22 @@ $(document).ready(function () {
         }
     });
 //Team Swiper Slider
-    var teamSlider = new Swiper ('.team__swiper-container', {
-        slideClass: 'team__swiper-slide',
-        wrapperClass: 'team__swiper-wrapper',
-        slidesPerView: 1,
-        lazy: {
-            loadPrevNext: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-            bulletClass: 'team__swiper_bullet',
-            bulletActiveClass: 'team__swiper_bullet-active'
-        }
-    });
-    var bLazy = new Blazy({
-        offset: 10,
-    });
+//     var teamSlider = new Swiper ('.team__swiper-container', {
+//         slideClass: 'team__swiper-slide',
+//         wrapperClass: 'team__swiper-wrapper',
+//         slidesPerView: 1,
+//         lazy: {
+//             loadPrevNext: true,
+//         },
+//         pagination: {
+//             el: '.swiper-pagination',
+//             type: 'bullets',
+//             clickable: true,
+//             bulletClass: 'team__swiper_bullet',
+//             bulletActiveClass: 'team__swiper_bullet-active'
+//         }
+//     });
+//     var bLazy = new Blazy({
+//         offset: 10,
+//     });
 });
